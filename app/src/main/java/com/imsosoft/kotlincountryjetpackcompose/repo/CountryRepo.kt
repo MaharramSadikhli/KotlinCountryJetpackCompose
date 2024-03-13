@@ -21,7 +21,7 @@ class CountryRepo @Inject constructor(
         return Resource.Success(response)
     }
 
-    suspend fun getCountry(): Resource<Country> {
+    suspend fun getCountry(id: String): Resource<Country> {
         val response = try {
             api.getCountry()
         } catch (e: Exception) {
