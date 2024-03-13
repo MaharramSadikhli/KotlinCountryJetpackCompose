@@ -15,9 +15,9 @@ import javax.inject.Inject
 class CountriesViewModel @Inject constructor(private val repo: CountryRepo): ViewModel()
 {
 
-    private var countries = mutableStateOf<List<CountriesItem>>(listOf()) // mutableStateOf<Countries>(listOf())
-    private var error = mutableStateOf("")
-    private var isLoading = mutableStateOf(false)
+    var countries = mutableStateOf<List<CountriesItem>>(listOf()) // mutableStateOf<Countries>(listOf())
+    var error = mutableStateOf("")
+    var isLoading = mutableStateOf(false)
 
     private var initCountries = listOf<CountriesItem>()
     private var isSearchStarting = true
@@ -63,10 +63,10 @@ class CountriesViewModel @Inject constructor(private val repo: CountryRepo): Vie
                         CountriesItem(
                             item.name,
                             item.capital,
-                            item.currency,
-                            item.language,
                             item.region,
+                            item.currency,
                             item.flag,
+                            item.language,
                         )
                     }
 
