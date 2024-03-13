@@ -52,7 +52,7 @@ class CountriesViewModel @Inject constructor(private val repo: CountryRepo): Vie
 
     }
 
-    private fun loadCountries() {
+    fun loadCountries() {
 
         viewModelScope.launch {
             isLoading.value = true
