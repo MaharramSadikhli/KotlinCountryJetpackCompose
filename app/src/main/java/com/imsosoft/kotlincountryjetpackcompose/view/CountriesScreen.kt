@@ -174,29 +174,7 @@ fun CountriesItemRow(country: CountriesItem, navController: NavController) {
     }
 }
 
-@Composable
-fun CountriesText(text: String) {
 
-    Text(
-        text = text,
-        style = MaterialTheme.typography.displayMedium,
-        modifier = Modifier.padding(2.dp),
-        color = MaterialTheme.colorScheme.primary
-    )
-
-}
-
-@Composable
-fun CountriesNameText(text: String) {
-
-    Text(
-        text = text,
-        style = MaterialTheme.typography.bodyLarge,
-        modifier = Modifier.padding(2.dp),
-        color = MaterialTheme.colorScheme.primary
-    )
-
-}
 
 @Composable
 fun RetryView(error: String, onRetry: () -> Unit) {
