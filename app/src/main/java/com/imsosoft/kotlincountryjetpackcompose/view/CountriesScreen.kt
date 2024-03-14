@@ -150,20 +150,10 @@ fun CountriesItemRow(country: CountriesItem, navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(color = MaterialTheme.colorScheme.secondary)
+            .background(color = MaterialTheme.colorScheme.tertiary)
             .clickable {
                 navController.navigate(
-                    route = country
-                        .countryParams(
-                            country.name,
-                            country.capital,
-                            country.region,
-                            country.currency,
-                            country.flag,
-                            country.language
-                        )
-                        .toString()
-                    //"country_detail_screen/${country.name}/${country.capital}/${country.region}/${country.currency}/${country.flag}/${country.language}"
+                    "country_screen/${country.name}/${country.capital}/${country.region}/${country.currency}/${country.flag}/${country.language}"
                 )
             }
     )
@@ -189,3 +179,16 @@ fun RetryView(error: String, onRetry: () -> Unit) {
         }
     }
 }
+
+//                    route = country
+//                        .countryParams(
+//                            country.name,
+//                            country.capital,
+//                            country.region,
+//                            country.currency,
+//                            country.flag,
+//                            country.language
+//                        )
+//                        .toString()
+
+//route = country.getCountryRoute()
