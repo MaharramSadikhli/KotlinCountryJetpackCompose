@@ -5,7 +5,7 @@ import com.imsosoft.kotlincountryjetpackcompose.model.CountriesItem
 object ExtensionFunc {
 
     fun CountriesItem.countryParams(name: String, capital: String, region: String, currency: String, flag: String, language: String): CountriesItem {
-        return "country_details_screen/${name}/$capital/$region/$currency/$flag/$language".toCountriesItem()
+        return "country_screen/${name}/$capital/$region/$currency/$flag/$language".toCountriesItem()
     }
 
     private fun String.toCountriesItem(): CountriesItem {
