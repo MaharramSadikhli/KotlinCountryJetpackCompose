@@ -14,7 +14,7 @@ fun CountriesText(text: String) {
         text = text,
         style = MaterialTheme.typography.displayMedium,
         modifier = Modifier.padding(2.dp),
-        color = MaterialTheme.colorScheme.secondary
+        color = MaterialTheme.colorScheme.primary
     )
 
 }
